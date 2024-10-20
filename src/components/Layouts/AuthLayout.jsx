@@ -1,5 +1,5 @@
 
-import SignInPage from '../../Pages/signIn'
+import SignInPage from '../../pages/signIn'
 import Logo from '../Elements/Logo/Index'
 import FormSignIn from '../Fragments/FormSignIn'
 import { Link } from 'react-router-dom'
