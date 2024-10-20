@@ -23,7 +23,7 @@ const AuthLayout = (props) => {
       {/* teks end */}
       {/* sign in with google start */}
       <div className="mb-8">
-        <a href='https://www.facebook.com/?locale2=id_ID&_rdr'
+        <a href=''
             target="_blank"
             rel="noopener noreferrer"
         
