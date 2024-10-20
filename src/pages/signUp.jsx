@@ -1,11 +1,12 @@
 import FormSignUp from "../components/Fragments/FormSignUp";
-import Authlayout from "../components/Layouts/Authlayout";
+// import Authlayout from "../components/Layouts/Authlayout";
+import AuthLayout from "../components/Layouts/AuthLayout";
 
 const SignUpPage = () => {
   return (
-    <Authlayout type = "sign up">
+    <AuthLayout type = "sign up">
       <FormSignUp />
-    </Authlayout>
+    </AuthLayout>
   );
 };
 
