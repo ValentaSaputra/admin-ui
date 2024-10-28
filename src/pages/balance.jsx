@@ -22,7 +22,7 @@ const BalancePage = () => {
         <div className="sm:w-1/3">
           <Card />
         </div>
-        <div className="m:w-1/3">
+        <div className="sm:w-1/3">
           <Card />
         </div>
         <div className="sm:w-1/3">
