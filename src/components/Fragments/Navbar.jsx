@@ -28,8 +28,8 @@ const Navbar = () => {
       label: "Bills",
     },
     {
-      id: "expencces",
-      link: "/expencces",
+      id: "expense",
+      link: "/expense",
       icon: <Icon.Expencces />,
       label: "Expenses",
     },
