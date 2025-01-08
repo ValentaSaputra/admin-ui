@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2011bf0 (add darkmode, upcoming-biils, loaderAnimation)
 import SignInPage from '../../pages/signIn'
 import Logo from '../Elements/Logo/index'
 import { useContext } from 'react'
@@ -7,14 +10,31 @@ import FormSignIn from '../Fragments/FormSignIn'
 import { Link } from 'react-router-dom'
 import SimpleBackdrop from '../Elements/Backdrop'
 import CustomizedSnackbars from '../Elements/SnackBar'
+<<<<<<< HEAD
 import * as motion from "motion/react-client";
+=======
+import * as motion from "motion/react-client"
+import { Icon } from '../Elements/Icon'
+import { DarkModeContext } from '../../context/darkModeContext'
+>>>>>>> 2011bf0 (add darkmode, upcoming-biils, loaderAnimation)
 
 const AuthLayout = (props) => {
   const {children,type} = props;
   const {msg, setMsg, open, setOpen, isLoading, setIsLoading} = useContext(NotifContext);
+<<<<<<< HEAD
 
   return (
     <div className="flex justify-center min-h-screen items-center bg-special-mainBg">
+=======
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
+  const handleDarkModeToggle = () => {
+    setDarkMode(!darkMode);
+  };
+
+  return (
+    <div className={`flex justify-center min-h-screen items-center ${darkMode ? 'bg-defaultBlack' : 'bg-special-mainBg'} ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+>>>>>>> 2011bf0 (add darkmode, upcoming-biils, loaderAnimation)
       {isLoading && (
         <SimpleBackdrop isLoading={isLoading} setIsLoading={setIsLoading} />
       )}
@@ -56,7 +76,11 @@ const AuthLayout = (props) => {
       {/* teks start */}
       <div className="my-9 px-7 flex justify-center text-xs text-gray-03 items-center flex-col static">
         <div className="border border-gray-05 w-full"></div>
+<<<<<<< HEAD
         <div class="px-2 bg-special-mainBg absolute"> or sign in with</div>
+=======
+        <div className={`px-2 ${darkMode ? 'bg-defaultBlack' : 'bg-special-mainBg'} absolute`}> or sign in with</div>
+>>>>>>> 2011bf0 (add darkmode, upcoming-biils, loaderAnimation)
       </div>
       {/* teks end */}
       {/* sign in with google start */}
@@ -145,6 +169,14 @@ const AuthLayout = (props) => {
     <Link to = "/register" className="text-primary text-sm font-bold">Create an account</Link>
   )}
 </div>
+<<<<<<< HEAD
+=======
+<div className="flex justify-center mt-4 ">
+  <span className="cursor-pointer" onClick={handleDarkModeToggle}>
+    <Icon.DarkMode />
+  </span>
+</div>
+>>>>>>> 2011bf0 (add darkmode, upcoming-biils, loaderAnimation)
 {/* link end */}
     </motion.div>
     {/* container end */}

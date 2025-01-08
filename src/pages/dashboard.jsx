@@ -8,12 +8,24 @@ import transactions from "../data/transaction";
 import CardBalance from "../components/Fragments/Dashboard/CardBalance";
 import CardStatistic from "../components/Fragments/Dashboard/CardStatistic";
 import CardGoal from "../components/Fragments/Dashboard/CardGoal";
+<<<<<<< HEAD
 
 const DashboardPage = () => {
   const tabs = ["All", "Revenue", "Expense"];
 
   const [trxs, setTrx] = useState(transactions);
   const [activeTab, setActiveTab] = useState("All");
+=======
+import { useDarkMode } from '../hooks/useDarkMode';
+import CardBills from "../components/Fragments/Dashboard/CardBills";
+
+const DashboardPage = () => {
+  const tabs = ["All", "Revenue", "Expense"];
+  
+  const [trxs, setTrx] = useState(transactions);
+  const [activeTab, setActiveTab] = useState("All");
+  const { darkMode } = useDarkMode();
+>>>>>>> 2011bf0 (add darkmode, upcoming-biils, loaderAnimation)
 
   function handleClick(e) {
     const transactionFiltered =
@@ -98,11 +110,20 @@ const DashboardPage = () => {
   return (
   <MainLayout type="dashboard">
   {/* top content start*/}
+<<<<<<< HEAD
   <div className="md:grid md:grid-cols-3 md:gap-x-6">
     <CardBalance/>
     {/* <Card title="Goals" /> */}
     <CardGoal/>
     <Card title="Upcoming Bill" desc={billCard} />
+=======
+  <div className={`md:grid md:grid-cols-3 md:gap-x-6 ${darkMode ? 'bg-defaultBlack' : 'bg-special-mainBg'}`}>
+    <CardBalance/>
+    {/* <Card title="Goals" /> */}
+    <CardGoal/>
+    <CardBills/>
+    {/* <Card title="Upcoming Bill" desc={billCard} /> */}
+>>>>>>> 2011bf0 (add darkmode, upcoming-biils, loaderAnimation)
     <Card
       variant="md:col-span-1 md:row-span-2"
       title="Recent Transaction"
@@ -136,6 +157,10 @@ const DashboardPage = () => {
       title="Expenses Breakdown"
       desc={<div className="lg:grid lg:grid-cols-3">{expenseCard}</div>}
     />
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 2011bf0 (add darkmode, upcoming-biils, loaderAnimation)
   </div>
   {/* buttom content end */}
   </MainLayout>
