@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { goals } from "../../../data/goals";
 import Card from "../../Elements/Card";
 import CompositionExample from "../../Elements/GaugeChart";
 import { Icon } from "../../Elements/Icon";
