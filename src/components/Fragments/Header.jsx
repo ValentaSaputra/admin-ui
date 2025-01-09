@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`border-b-2 py-4 px-6 flex items-center justify-between ${theme.name} ${darkMode ? 'bg-defaultBlack' : 'bg-special-mainBg'}`}>
+    <header className={`border-b-2 py-4 px-6 flex items-center justify-between ${theme.name} ${darkMode ? 'bg-defaultBlack' : 'bg-special-mainBg'} ${darkMode ? 'text-white' : 'text-gray-900'}`}>
       <div className="flex">
         <div className={`font-bold text-lg ${darkMode ? 'text-white' : 'text-gray-900'}`}>{name}</div>
         <div className="ms-6 text-gray-03">{date}</div>
